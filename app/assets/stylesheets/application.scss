@@ -1,0 +1,50 @@
+/*
+ *= require_self
+ */
+
+@import "bourbon";
+@import "neat";
+
+header {
+  @include clearfix;
+  border-bottom: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+
+  .agent-name {
+    float: left;
+    margin-right: 2em;
+  }
+
+  .quick-launch {
+    float: left;
+    margin-right: 2em;
+  }
+
+  .new-search {
+    float: right;
+    margin-right: 2em;
+  }
+
+  .messages {
+    float: right;
+    margin-right: 2em;
+  }
+
+  .user {
+    float: right;
+  }
+}
+
+.tab-bar {
+  border-right: 1px solid #ddd;
+  float: left;
+  margin-right: 5%;
+  min-height: 400px;
+  width: 15%;
+}
+
+.listings {
+  float: left;
+  width: 80%;
+}

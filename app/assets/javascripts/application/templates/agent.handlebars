@@ -1,0 +1,52 @@
+<header>
+  <div class="agent-name">
+    {{content.name}}<br>
+    <small>[agent-dropdown agent=content]</small>
+  </div>
+
+  <div class="quick-launch">
+    <input type="text" placeholder="Quick Launch" />
+  </div>
+
+  <div class="user">
+    {{currentUser.name}}<br>
+    <small>[user-dropdown user=currentUser]</small>
+  </div>
+
+  <div class="messages">
+    Messages<br>
+    <small>[messages-dropdown agent=content user=currentUser]</small>
+  </div>
+
+  <div class="new-search">
+    <button>
+      New Search
+    </button>
+  </div>
+</header>
+
+<div class="tab-bar">
+  <ul>
+    <li>
+      {{#link-to "agent.inbox"}}
+        Inbox [{{meta.inboxCount}}]
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to "agent.favorites"}}
+        Favorites [{{meta.favoritesCount}}]
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to "agent.likes"}}
+        Likes [{{meta.likesCount}}]
+      {{/link-to}}
+    </li>
+  </ul>
+</div>
+
+<main>
+  {{outlet}}
+</main>
